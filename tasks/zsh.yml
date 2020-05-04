@@ -2,7 +2,7 @@
 
 - name: "Ohmyzsh folder"
   stat:
-    path: "{{ ohmyzsh_path }}"
+    path: "{{ ohmyzsh_folder }}"
   register: ohmyzsh_folder
 
 - name: "Install Ohmyzsh"

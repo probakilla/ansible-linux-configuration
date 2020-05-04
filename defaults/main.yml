@@ -17,7 +17,7 @@ program_list:
 # File/Folders paths
 config_folder: $HOME/.config
 zshrc_link: $HOME/.config/zsh/.zshrc
-ohmyzsh_path: $HOME/.config
+ohmyzsh_folder: $HOME/.config/oh-my-zsh
 vundle_path: $HOME/.config/vim
 dotfiles_path: $HOME/
 dotfiles_folder: $HOME/.dotfiles
