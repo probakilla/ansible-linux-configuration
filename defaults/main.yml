@@ -15,12 +15,12 @@ program_list:
     - w3m
 
 # File/Folders paths
-config_folder: $HOME/.config
+config_path: $HOME/.config
 zshrc_link: $HOME/.config/zsh/.zshrc
-ohmyzsh_folder: $HOME/.config/oh-my-zsh
+zshrc_file: $HOME/.dotfiles/.zshrc
+ohmyzsh_path: $HOME/.config/oh-my-zsh
 vundle_path: $HOME/.config/vim
-dotfiles_path: $HOME/
-dotfiles_folder: $HOME/.dotfiles
+dotfiles_path: $HOME/.dotfiles
 
 # Github repos
 dotfiles_repo: "https://github.com/probakilla/dotfiles.git"

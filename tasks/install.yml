@@ -8,7 +8,7 @@
 
 - name: "Create config folder if not exists"
   file:
-    path: "{{ config_folder }}"
+    path: "{{ config_path }}"
     state: directory
-    mode: "0644"
+    owner: "{{ user }}"
 
