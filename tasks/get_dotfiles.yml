@@ -8,5 +8,5 @@
 - name: "Cloning dotfiles"
   git:
     repo: "{{ dotfiles_repo }}"
-    dest: "{{ dotfiles_path }}"
+    dest: "{{ dotfiles_folder }}"
   when: not dotfile_folder.stat.exists
