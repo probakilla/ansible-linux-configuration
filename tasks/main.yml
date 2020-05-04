@@ -1,6 +1,6 @@
 ---
 
-- include: get_dotfiles.yml
 - include: install.yml
+- include: get_dotfiles.yml
 - include: zsh.yml
 
