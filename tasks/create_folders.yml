@@ -1,0 +1,7 @@
+---
+
+- name: "Create vim folder"
+  file:
+    path: "{{ vundle_path }}"
+    state: directory
+    mode: "0644"

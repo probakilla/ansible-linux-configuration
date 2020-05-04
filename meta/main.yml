@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Probakilla
+  role_name: Linux auto-config
+  description: Ansible job to auto-install my dotfiles and primary programs
+
+  license: GPLv3
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Debian
+    versions:
+    - all
+
+  galaxy_tags:
+    - probakilla

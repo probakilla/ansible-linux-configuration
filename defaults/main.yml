@@ -1,0 +1,23 @@
+---
+
+# List of program to install
+program_list:
+    - neovim
+    - curl
+    - zsh
+    - git
+    - build-essential
+    - cmake
+    - python3-dev
+    - tmux
+    - neofetch
+    - neomutt
+    - w3m
+
+# File/Folders paths
+ohmyzsh_path: $HOME/.config
+vundle_path: $HOME/.config/vim
+dotfiles_path: $HOME/
+
+# Github repos
+dotfiles_repo: "https://github.com/probakilla/dotfiles.git"

@@ -1,0 +1,12 @@
+---
+
+- name: "Dotfile folder"
+  stat:
+    path: "{{ dotfiles_path }}"
+  register: dotfile_folder
+
+- name: "Cloning dotfiles"
+  git:
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_path }}"
+  when: not dotfile_folder.exists
