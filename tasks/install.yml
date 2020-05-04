@@ -6,23 +6,9 @@
     name: "{{ item }}"
   loop: "{{ program_list }}"
 
-- name: "Ohmyzsh folder"
-  stat:
-    path: "{{ ohmyzsh_path }}"
-  register: ohmyzsh_folder
-
-- name: "Install Ohmyzsh"
-  shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  when: not ohmyzsh_folder.stat.exists
-
-- name: "Create Symbolic link for ZSH"
+- name: "Create config folder if not exists"
   file:
-    src: "{{ dotfile_folder }}/.zshrc"
-    dest: "{{ zshrc_link }}"
-    state: link
+    path: "{{ config_folder }}"
+    state: directory
+    mode: "0644"
 
-- name: "Change default shell to ZSH"
-  user:
-    name: "{{ user }}"
-    shell: "zsh"
-  become: true

@@ -2,7 +2,7 @@
 
 - name: "Dotfile folder"
   stat:
-    path: "{{ dotfiles_path }}"
+    path: "{{ dotfiles_folder }}"
   register: dotfile_folder
 
 - name: "Cloning dotfiles"
