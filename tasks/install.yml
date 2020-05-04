@@ -10,5 +10,5 @@
   file:
     path: "{{ config_path }}"
     state: directory
-    owner: "{{ user }}"
+    owner: "{{ ansible_user }}"
 

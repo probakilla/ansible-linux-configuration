@@ -10,14 +10,20 @@
   when: not ohmyzsh_folder.stat.exists
   ignore_errors: true
 
+- name: "Creating zsh folder"
+  file:
+    path: "{{ zsh_folder }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+
 - name: "Create Symbolic link for ZSH"
   file:
-    src: "{{ zshrc_file }}"
-    dest: "{{ zshrc_link }}"
+    src: "{{ zshrc_link }}"
+    dest: "{{ zshrc_file }}"
     state: link
 
 - name: "Change default shell to ZSH"
   user:
-    name: "{{ user }}"
+    name: "{{ ansible_user }}"
     shell: "zsh"
   become: true
