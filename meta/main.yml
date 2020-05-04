@@ -1,6 +1,6 @@
 galaxy_info:
   author: Probakilla
-  role_name: Linux auto-config
+  role_name: linux-auto-config
   description: Ansible job to auto-install my dotfiles and primary programs
 
   license: GPLv3
