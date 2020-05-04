@@ -1,6 +1,5 @@
 ---
 
-- include: create_folders.yml
 - include: get_dotfiles.yml
 - include: symlinks.yml
 - include: install.yml
