@@ -5,3 +5,9 @@
     path: "{{ vundle_path }}"
     state: directory
     mode: "0644"
+
+- name: "Create config folder"
+  file:
+      path: "{{ config_folder }}"
+      state: directory
+      mode: "0644"

@@ -11,17 +11,18 @@
     path: "{{ ohmyzsh_path }}"
   register: ohmyzsh_folder
 
-- name: "Vundle folder"
-  stat:
-    path: "{{ vundle_path }}"
-  register: vundle_folder
-
 - name: "Install Ohmyzsh"
   shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   when: not ohmyzsh_folder.stat.exists
 
-- name: "Install Vundle"
-  git:
-    repo: "https://github.com/VundleVim/Vundle.vim.git"
-    dest: "{{ vundle_path }}"
-  when: not vundle_folder.exists
+- name: "Create Symbolic link for ZSH"
+  file:
+    src: "{{ dotfile_folder }}/.zshrc"
+    dest: "{{ zshrc_link }}"
+    state: link
+
+- name: "Change default shell to ZSH"
+  user:
+    name: "{{ user }}"
+    shell: "zsh"
+  become: true
