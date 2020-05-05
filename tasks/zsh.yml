@@ -5,6 +5,11 @@
     path: "{{ ohmyzsh_path }}"
   register: ohmyzsh_folder
 
+- name: "Default ohmyzsh folder"
+  stat:
+    path: "{{ default_ohmyzsh }}"
+  register: ohmyzsh_default_folder
+
 - name: "Install Ohmyzsh"
   shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   when: not ohmyzsh_folder.stat.exists
@@ -19,7 +24,7 @@
 - name: "Moving the old oh-myzsh file"
   shell:
     cmd: "mv $HOME/.oh-my-zsh $HOME/.config/oh-my-zsh"
-  when: not ohmyzsh_folder.stat.exists
+  when: ohmyzsh_default_folder.stat.exists
 
 - name: "Create Symbolic link for ZSH"
   file:
