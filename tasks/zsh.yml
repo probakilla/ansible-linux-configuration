@@ -33,6 +33,12 @@
     shell: "/usr/bin/zsh"
   become: true
 
+- name: "Change default shell for root"
+  user:
+    name: "root"
+    shell: "/usr/bin/zsh"
+  become: true
+
 - name: "Create Symlink for zshenv"
   file:
     src: "{{ zshenv_file }}"
@@ -41,5 +47,5 @@
 
 - name: "Removing default zshrc"
   file:
-    src: "{{ zshrc_default }}"
+    path: "{{ zshrc_default }}"
     state: absent
