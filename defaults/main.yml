@@ -37,5 +37,10 @@ zshenv_link: $HOME/.zshenv
 zsh_syntax_highlighting_path: $HOME/.config/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 zsh_syntax_highlighting_repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
 
+# TMUX
+tmux_folder: $HOME/.config/tmux
+tmux_conf_file: $HOME/.dotfiles/.tmux.conf
+tmux_conf_link: $HOME/.config/tmux/.tmux.conf
+
 # Github repos
 dotfiles_repo: "https://github.com/probakilla/dotfiles.git"

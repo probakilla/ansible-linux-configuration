@@ -1,0 +1,13 @@
+---
+
+- name: "Create tmux folder"
+  file:
+    path: "{{ tmux_folder }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+
+- name: "Create symlink for tmux config"
+  file:
+    src: "{{ tmux_conf_file }}"
+    dest: "{{ tmux_conf_link }}"
+    state: link
