@@ -52,5 +52,5 @@
 
 - name: "Installing zsh-syntax-highlighting"
   git:
-    repo: "{{ zsh_syntax_highlightinh_repo }}"
+    repo: "{{ zsh_syntax_highlighting_repo }}"
     dest: "{{ zsh_syntax_highlighting_path }}"
