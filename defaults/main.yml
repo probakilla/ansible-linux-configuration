@@ -27,6 +27,7 @@ ohmyzsh_path: $HOME/.config/oh-my-zsh
 # ZSHRC
 zshrc_link: $HOME/.config/zsh/.zshrc
 zshrc_file: $HOME/.dotfiles/.zshrc
+zshrc_default: $HOME/.zshrc
 
 # ZSHENV
 zshenv_file: $HOME/.dotfiles/.zshenv

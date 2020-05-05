@@ -38,3 +38,8 @@
     src: "{{ zshenv_file }}"
     dest: "{{ zshenv_link }}"
     state: link
+
+- name: "Removing default zshrc"
+  file:
+    src: "{{ zshrc_default }}"
+    state: absent
