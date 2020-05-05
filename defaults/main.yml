@@ -16,13 +16,21 @@ program_list:
 
 # File/Folders paths
 config_path: $HOME/.config
-zsh_folder: $HOME/.config/zsh
-zshrc_link: $HOME/.config/zsh/.zshrc
-zshrc_file: $HOME/.dotfiles/.zshrc
-default_ohmyzsh: $HOME/.oh-my-zsh
-ohmyzsh_path: $HOME/.config/oh-my-zsh
 vundle_path: $HOME/.config/vim
 dotfiles_path: $HOME/.dotfiles
+
+# ZSH
+zsh_folder: $HOME/.config/zsh
+default_ohmyzsh: $HOME/.oh-my-zsh
+ohmyzsh_path: $HOME/.config/oh-my-zsh
+
+# ZSHRC
+zshrc_link: $HOME/.config/zsh/.zshrc
+zshrc_file: $HOME/.dotfiles/.zshrc
+
+# ZSHENV
+zshenv_file: $HOME/.dotfiles/.zshenv
+zshenv_link: $HOME/.zshenv
 
 # Github repos
 dotfiles_repo: "https://github.com/probakilla/dotfiles.git"

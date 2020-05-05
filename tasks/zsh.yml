@@ -18,12 +18,13 @@
 
 - name: "Moving the old oh-myzsh file"
   shell:
-    cmd: "mv -r $HOME/.oh-my-zsh $HOME/.config/oh-my-zsh"
+    cmd: "mv $HOME/.oh-my-zsh $HOME/.config/oh-my-zsh"
+  when: not ohmyzsh_folder.stat.exists
 
 - name: "Create Symbolic link for ZSH"
   file:
-    src: "{{ zshrc_link }}"
-    dest: "{{ zshrc_file }}"
+    src: "{{ zshrc_file }}"
+    dest: "{{ zshrc_link }}"
     state: link
 
 - name: "Change default shell to ZSH"
@@ -31,3 +32,9 @@
     name: "{{ ansible_user }}"
     shell: "zsh"
   become: true
+
+- name: "Create Symlink for zshenv"
+  file:
+    src: "{{ zshenv_file }}"
+    dest: "{{ zshenv_link }}"
+    state: link
