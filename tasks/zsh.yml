@@ -30,7 +30,7 @@
 - name: "Change default shell to ZSH"
   user:
     name: "{{ ansible_user }}"
-    shell: "zsh"
+    shell: "/usr/bin/zsh"
   become: true
 
 - name: "Create Symlink for zshenv"
