@@ -33,5 +33,9 @@ zshrc_default: $HOME/.zshrc
 zshenv_file: $HOME/.dotfiles/.zshenv
 zshenv_link: $HOME/.zshenv
 
+# ZSH PLUGINS
+zsh_syntax_highlighting_path: $HOME/.config/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+zsh_syntax_highlighting_repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+
 # Github repos
 dotfiles_repo: "https://github.com/probakilla/dotfiles.git"
