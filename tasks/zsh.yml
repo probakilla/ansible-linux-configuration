@@ -16,16 +16,9 @@
     state: directory
     owner: "{{ ansible_user }}"
 
-- name: "Moving the default oh-my-zsh"
-  copy:
-    src: "{{ default_ohmyzsh }}"
-    dest: "{{ config_path }}"
-    owner: "{{ ansible_user }}"
-
-- name: "Remove default oh-my-zsh"
-  file:
-    path: "{{ default_ohmyzsh }}"
-    state: absent
+- name: "Moving the old oh-myzsh file"
+  shell:
+    cmd: "mv -r $HOME/.oh-my-zsh $HOME/.config/oh-my-zsh"
 
 - name: "Create Symbolic link for ZSH"
   file:
