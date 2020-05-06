@@ -7,7 +7,7 @@
 
 - name: "Default ohmyzsh folder"
   stat:
-    path: "{{ default_ohmyzsh }}"
+    path: $HOME/.oh-my-zsh/
   register: ohmyzsh_default_folder
 
 - name: "Install Ohmyzsh"
@@ -21,7 +21,7 @@
     state: directory
     owner: "{{ ansible_user }}"
 
-- name: "Moving the old oh-myzsh file"
+- name: "Moving the old oh-my-zsh file"
   shell:
     cmd: "mv $HOME/.oh-my-zsh $HOME/.config/oh-my-zsh"
   when: ohmyzsh_default_folder.stat.exists

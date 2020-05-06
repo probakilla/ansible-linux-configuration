@@ -1,0 +1,6 @@
+---
+
+- name: "Installing Vundle"
+  git:
+    repo: "{{ vundle_repo }}"
+    dest: "{{ vundle_location }}"
