@@ -16,7 +16,6 @@ program_list:
 
 # File/Folders paths
 config_path: $HOME/.config
-vundle_path: $HOME/.config/vim
 dotfiles_path: $HOME/.dotfiles
 
 # ZSH
@@ -44,3 +43,10 @@ tmux_conf_link: $HOME/.config/tmux/.tmux.conf
 
 # Github repos
 dotfiles_repo: "https://github.com/probakilla/dotfiles.git"
+
+# VIM
+vim_folder: $HOME/.config/vim
+
+# VUNDLE
+vundle_path: $HOME/.config/vim/Vundle.vim
+vundle_repo: "https://github.com/VundleVim/Vundle.vim.git"

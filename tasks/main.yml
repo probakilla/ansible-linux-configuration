@@ -4,3 +4,4 @@
 - include: get_dotfiles.yml
 - include: zsh.yml
 - include: tmux.yml
+- include: vim.yml

@@ -1,6 +1,18 @@
 ---
 
+- name: "Creating vim folder"
+  file:
+    path: "{{ vim_folder }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+
+- name: "Vundle folder"
+  stat:
+    path: "{{ vundle_path }}"
+  register: vundle_folder
+
 - name: "Installing Vundle"
   git:
     repo: "{{ vundle_repo }}"
-    dest: "{{ vundle_location }}"
+    dest: "{{ vundle_path }}"
+    when: not vundle_folder.stat.exists

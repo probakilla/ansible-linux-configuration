@@ -18,7 +18,7 @@
 
 - name: "Default ohmyzsh folder"
   stat:
-    path: $HOME/.oh-my-zsh/
+    path: "{{ default_ohmyzsh }}"
   register: ohmyzsh_default_folder
 
 - name: "Moving the old oh-my-zsh file"
