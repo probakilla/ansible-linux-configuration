@@ -48,5 +48,9 @@ dotfiles_repo: "https://github.com/probakilla/dotfiles.git"
 vim_folder: $HOME/.config/vim
 
 # VUNDLE
-vundle_path: $HOME/.config/vim/Vundle.vim
+vundle_path: $HOME/.config/vim/bundle/Vundle.vim
+vim_bundle_folder: $HOME/.config/vim/bundle
 vundle_repo: "https://github.com/VundleVim/Vundle.vim.git"
+
+# YCM
+ycm_script: $HOME/.config/vim/bundle/YouCompleteMe/install.py

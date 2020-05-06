@@ -6,13 +6,26 @@
     state: directory
     owner: "{{ ansible_user }}"
 
-- name: "Vundle folder"
-  stat:
-    path: "{{ vundle_path }}"
-  register: vundle_folder
+- name: "Creating vim bundle folder"
+  file:
+    path: "{{ vim_bundle_folder }}"
+    state: directory
+    owner: "{{ ansible_user }}"
 
 - name: "Installing Vundle"
   git:
     repo: "{{ vundle_repo }}"
     dest: "{{ vundle_path }}"
-    when: not vundle_folder.stat.exists
+
+- name: "Installing vim plugins"
+  command: vim +PluginInstall +qall
+  args:
+    removes: $HOME/.config/vim/bundle/Vundle.vim
+    executable: /bin/bash
+  ignore_errors: true
+
+- name: "Compiling the YCM plugin"
+  script: "{{ ycm_script }}"
+  args:
+    removes: "{{ ycm_script }}"
+    executable: python3
