@@ -5,11 +5,6 @@
     path: "{{ ohmyzsh_path }}"
   register: ohmyzsh_folder
 
-- name: "Default ohmyzsh folder"
-  stat:
-    path: $HOME/.oh-my-zsh/
-  register: ohmyzsh_default_folder
-
 - name: "Install Ohmyzsh"
   shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   when: not ohmyzsh_folder.stat.exists
@@ -20,6 +15,11 @@
     path: "{{ zsh_folder }}"
     state: directory
     owner: "{{ ansible_user }}"
+
+- name: "Default ohmyzsh folder"
+  stat:
+    path: $HOME/.oh-my-zsh/
+  register: ohmyzsh_default_folder
 
 - name: "Moving the old oh-my-zsh file"
   shell: "mv $HOME/.oh-my-zsh $HOME/.config/oh-my-zsh"
