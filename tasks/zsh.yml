@@ -24,7 +24,6 @@
 - name: "Moving the old oh-my-zsh file"
   shell:
     cmd: "mv $HOME/.oh-my-zsh $HOME/.config/oh-my-zsh"
-  when: ohmyzsh_default_folder.stat.exists
 
 - name: "Create Symbolic link for ZSH"
   file:
