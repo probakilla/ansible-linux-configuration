@@ -16,6 +16,8 @@ program_list:
     - neomutt
     - w3m
     - ruby-full
+    - nodejs
+    - npm
 
 # File/Folders paths
 config_path: $HOME/.config
