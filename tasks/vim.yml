@@ -29,3 +29,7 @@
   args:
     removes: "{{ ycm_script }}"
     executable: python3
+
+- name: "Installing ruby neovim"
+  command: gem install neovim
+  become: true
