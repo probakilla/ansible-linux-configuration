@@ -34,6 +34,6 @@
   command: gem install neovim
   become: true
   
- - name: "Installing node neovim"
-   command: npm install -g neovim
-   become: true
+- name: "Installing node neovim"
+  command: npm install -g neovim
+  become: true
