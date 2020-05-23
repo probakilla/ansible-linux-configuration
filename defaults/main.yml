@@ -13,6 +13,7 @@ program_list:
     - neofetch
     - neomutt
     - w3m
+    - ruby-full
 
 # File/Folders paths
 config_path: $HOME/.config
