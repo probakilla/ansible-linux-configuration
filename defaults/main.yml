@@ -9,6 +9,8 @@ program_list:
     - build-essential
     - cmake
     - python3-dev
+    - python-pip
+    - python3-pip
     - tmux
     - neofetch
     - neomutt
