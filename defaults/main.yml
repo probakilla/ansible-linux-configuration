@@ -59,3 +59,7 @@ vundle_repo: "https://github.com/VundleVim/Vundle.vim.git"
 
 # YCM
 ycm_script: $HOME/.config/vim/bundle/YouCompleteMe/install.py
+
+# PYBIN
+pybin_folder: $HOME/.local/pybin
+pybin_repo: "https://github.com/probakilla/pybin.git"

@@ -11,3 +11,14 @@
     path: "{{ config_path }}"
     state: directory
     owner: "{{ ansible_user }}"
+
+- name: "Pybin folder"
+  stat:
+    path: "{{ pybin_folder }}"
+  register: pybin_stats
+
+- name: "Clone pybin repo"
+  git:
+    repo: "{{ pybin_repo }}"
+    dest: "{{ pybin_folder }}"
+  when: not pybin_stats.exists
