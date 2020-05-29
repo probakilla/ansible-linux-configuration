@@ -21,4 +21,4 @@
   git:
     repo: "{{ pybin_repo }}"
     dest: "{{ pybin_folder }}"
-  when: not pybin_stats.exists
+  when: not pybin_stats.stst.exists
