@@ -38,4 +38,4 @@
   cron:
     name: "Updating dotfiles"
     special_time: reboot
-    job: "su -s /bin/sh nobody -c 'cd {{ dotfiles_path }} && /usr/bin/git pull origin master'"
+    job: "su -s /bin/sh nobody -c 'cd {{ ansible_env.HOME }}/.dotfiles && /usr/bin/git pull origin master'"
