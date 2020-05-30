@@ -44,5 +44,5 @@
 - name: "Changing file mode"
   file:
     path: "{{ init_script_location }}"
-    mode: '0644'
+    mode: 'a+x'
   become: true
