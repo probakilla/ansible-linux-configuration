@@ -2,6 +2,6 @@
 
 - include: install.yml
 - include: get_dotfiles.yml
-- include: zsh.yml
+- include: zsh_main.yml
 - include: tmux.yml
 - include: vim.yml
