@@ -15,5 +15,4 @@
 
 - name: "Emabling the script"
   shell: "update-rc.d {{ init_script_name }} defaults"
-  args:
-    executable: /bin/bash
+  become: true
