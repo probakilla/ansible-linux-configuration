@@ -1,0 +1,19 @@
+---
+
+- name: "Installing update script"
+  template:
+    src: update_repos.j2
+    dest: "{{ init_script_location }}"
+    follow: yes
+  become: true
+
+- name: "Changing file mode"
+  file:
+    path: "{{ init_script_location }}"
+    mode: 'a+x'
+  become: true
+
+- name: "Emabling the script"
+  shell: "update-rc.d {{ init_script_name }} defaults"
+  args:
+    executable: /bin/bash

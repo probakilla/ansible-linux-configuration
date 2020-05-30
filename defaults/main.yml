@@ -2,6 +2,7 @@
 
 # List of program to install
 program_list:
+    - sysv-rc
     - neovim
     - curl
     - zsh
@@ -71,4 +72,5 @@ scripts_folder: $HOME/.local/scripts
 scripts_repo: "https://github.com/probakilla/bin.git"
 
 # INIT
-init_script_location: /etc/init.d/update_repos.sh
+init_script_name: update_repos
+init_script_location: /etc/init.d/update_repos

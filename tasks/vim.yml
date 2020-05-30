@@ -18,11 +18,9 @@
     dest: "{{ vundle_path }}"
 
 - name: "Installing vim plugins"
-  command: vim +PluginInstall +qall
+  shell: vim +PluginInstall +qall
   args:
-    removes: $HOME/.config/vim/bundle/Vundle.vim
     executable: /bin/bash
-  ignore_errors: true
 
 - name: "Compiling the YCM plugin"
   script: "{{ ycm_script }}"

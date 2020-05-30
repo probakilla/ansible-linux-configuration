@@ -1,6 +1,7 @@
 ---
 
 - include: install.yml
+- include: startup.yml
 - include: get_dotfiles.yml
 - include: zsh_main.yml
 - include: tmux.yml
