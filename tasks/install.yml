@@ -34,8 +34,15 @@
     dest: "{{ scripts_folder }}"
   when: not scripts_stats.stat.exists
 
-- name: "Creating a cronjob to automatically update .dotfiles folder"
-  cron:
-    name: "Updating dotfiles"
-    special_time: reboot
-    job: "su -s /bin/sh nobody -c 'cd {{ ansible_env.HOME }}/.dotfiles && /usr/bin/git pull origin master'"
+- name: "Installing update script"
+  template:
+    src: update_repos.j2
+    dest: "{{ init_script_location }}"
+    follow: yes
+  become: true
+
+- name: "Changing file mode"
+  file:
+    path: "{{ init_script_location }}"
+    mode: '0644'
+  become: true

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function update_repo {
+    local repo_path = $1
+    cd $repo_path && git pull origin master
+}
+
+update_repo {{ ansible_env.HOME }}/.dotfiles

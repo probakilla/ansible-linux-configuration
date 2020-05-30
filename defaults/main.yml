@@ -69,3 +69,6 @@ pybin_repo: "https://github.com/probakilla/pybin.git"
 # SCRIPTS
 scripts_folder: $HOME/.local/scripts
 scripts_repo: "https://github.com/probakilla/bin.git"
+
+# INIT
+init_script_location: /etc/init.d/update_repos.sh
