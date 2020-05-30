@@ -1,0 +1,11 @@
+---
+
+- name: "Installing zsh-syntax-highlighting"
+  git:
+    repo: "{{ zsh_syntax_highlighting_repo }}"
+    dest: "{{ zsh_syntax_highlighting_path }}"
+
+- name: "Installing zsh-z"
+  git:
+    repo: "{{ zsh_zsh-z_repo }}"
+    dest: "{{ zsh_zsh-z_path }}"

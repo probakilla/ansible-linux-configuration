@@ -54,7 +54,4 @@
     path: "{{ zshrc_default }}"
     state: absent
 
-- name: "Installing zsh-syntax-highlighting"
-  git:
-    repo: "{{ zsh_syntax_highlighting_repo }}"
-    dest: "{{ zsh_syntax_highlighting_path }}"
+- include: zsh_plugins.yml
