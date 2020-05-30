@@ -7,5 +7,5 @@
 
 - name: "Installing zsh-z"
   git:
-    repo: "{{ zsh_zsh-z_repo }}"
-    dest: "{{ zsh_zsh-z_path }}"
+    repo: "{{ zsh_zsh_z_repo }}"
+    dest: "{{ zsh_zsh_z_path }}"

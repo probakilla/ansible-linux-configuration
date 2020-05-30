@@ -40,8 +40,8 @@ zshenv_link: $HOME/.zshenv
 # ZSH PLUGINS
 zsh_syntax_highlighting_path: $HOME/.config/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 zsh_syntax_highlighting_repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
-zsh_zsh-z_repo: "https://github.com/agkozak/zsh-z"
-zsh_zsh-z_path: $HOME/.config/oh-my-zsh/custom/plugins/zsh-z
+zsh_zsh_z_repo: "https://github.com/agkozak/zsh-z"
+zsh_zsh_z_path: $HOME/.config/oh-my-zsh/custom/plugins/zsh-z
 
 # TMUX
 tmux_folder: $HOME/.config/tmux
