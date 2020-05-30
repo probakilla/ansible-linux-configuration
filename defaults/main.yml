@@ -65,3 +65,7 @@ ycm_script: $HOME/.config/vim/bundle/YouCompleteMe/install.py
 # PYBIN
 pybin_folder: $HOME/.local/pybin
 pybin_repo: "https://github.com/probakilla/pybin.git"
+
+# SCRIPTS
+scripts_folder: $HOME/.local/scripts
+scripts_repo: "https://github.com/probakilla/bin.git"

@@ -22,3 +22,20 @@
     repo: "{{ pybin_repo }}"
     dest: "{{ pybin_folder }}"
   when: not pybin_stats.stat.exists
+
+- name: "Scrips folder"
+  stat:
+    path: "{{ scripts_folder }}"
+  register: scripts_stats
+
+- name: "Cloning scripts repo"
+  git:
+    repo: "{{ scripts_repo }}"
+    dest: "{{ scripts_folder }}"
+  when: not scripts_stats.stat.exists
+
+- name: "Creating a cronjob to automatically update .dotfiles folder"
+  cron:
+    name: "Updating dotfiles"
+    special_time: reboot
+    job: "su -s /bin/sh nobody -c 'cd {{ dotfiles_path }} && /usr/bin/git pull origin master'"
