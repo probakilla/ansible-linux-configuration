@@ -14,5 +14,5 @@
   become: true
 
 - name: "Emabling the script"
-  shell: "update-rc.d {{ init_script_name }} defaults"
+  shell: "sudo update-rc.d {{ init_script_name }} defaults"
   become: true
