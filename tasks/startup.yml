@@ -13,6 +13,8 @@
     mode: 'a+x'
   become: true
 
-- name: "Emabling the script"
-  shell: "sudo update-rc.d {{ init_script_name }} defaults"
-  become: true
+- name: "Installing the file in a cronjob"
+  cron:
+    - name: "Updating user configuration repos"
+      special_time: reboot
+      job: "{{ init_script_location }}"

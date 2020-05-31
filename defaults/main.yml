@@ -73,4 +73,4 @@ scripts_repo: "https://github.com/probakilla/bin.git"
 
 # INIT
 init_script_name: update_repos
-init_script_location: /etc/init.d/update_repos
+init_script_location: /usr/bin/update_repos

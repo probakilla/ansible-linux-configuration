@@ -1,35 +1,18 @@
 #!/bin/bash
 
-### BEGIN INIT INFO
-# Provides:          update_repos
-# Required-Start:    $remote_fs $syslog
-# Required-Stop:     $remote_fs $syslog
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: Update the repos at startup
-# Description:       Run a git pull command on the wanted repos
-### END INIT INFO
+GIT_PATH=/usr/bin/git
+USR_ROOT={{ ansible_env.HOME }}
 
 function update_repo {
     local repo_path=$1
-    cd $repo_path && git pull origin master
+    cd $repo_path && $GIT_PATH pull origin master
+    exit 0
 }
 
 function main {
-    update_repo {{ ansible_env.HOME }}/.dotfiles
+    update_repo $USR_ROOT/.dotfiles
+    exit 0
 }
 
-case "$1" in
-    start)
-        echo "Starting script update_repo"
-        main
-        ;;
-    stop)
-        echo "Stoping script update_repo"
-        ;;
-    *)
-        echo "Usage: /etc/init.d/update_repos {start|stop}"
-        ;;
-esac
-
+main
 exit 0
