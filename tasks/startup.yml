@@ -15,6 +15,6 @@
 
 - name: "Installing the file in a cronjob"
   cron:
-    - name: "Updating user configuration repos"
-      special_time: reboot
-      job: "{{ init_script_location }}"
+    name: "Updating user configuration repos"
+    special_time: reboot
+    job: "{{ init_script_location }}"
