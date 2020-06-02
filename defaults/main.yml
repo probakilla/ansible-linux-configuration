@@ -19,6 +19,7 @@ program_list:
     - ruby-full
     - nodejs
     - npm
+    - netcat
 
 # File/Folders paths
 config_path: $HOME/.config
